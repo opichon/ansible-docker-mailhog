@@ -1,0 +1,20 @@
+---
+- name: Run mailhog mail server
+  become: yes
+  become_user: "{{ mailhog_user }}"
+  docker_container:
+    image: mailhog/mailhog
+    labels:
+      traefik.backend: mailhog
+      traefik.frontend.rule: "Host:{{ mailhog_hostname }}"
+      traefik.port: "8025"
+    name: mailhog
+    networks:
+      - name: "{{ mailhog_network }}"
+    ports:
+      - 1025:1025
+      - 8025:8025
+    recreate: true
+    restart_policy: always
+    state: started
+
