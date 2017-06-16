@@ -1,4 +1,9 @@
 ---
+- name: Create network
+  docker_network:
+    driver: bridge
+    name: "{{ mailhog_network }}"
+
 - name: Run mailhog mail server
   docker_container:
     image: mailhog/mailhog
