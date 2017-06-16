@@ -1,7 +1,5 @@
 ---
 - name: Run mailhog mail server
-  become: yes
-  become_user: "{{ mailhog_user }}"
   docker_container:
     image: mailhog/mailhog
     labels:
