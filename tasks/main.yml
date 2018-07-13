@@ -20,4 +20,3 @@
     recreate: true
     restart_policy: always
     state: started
-
