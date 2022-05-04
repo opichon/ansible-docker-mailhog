@@ -1,4 +1,4 @@
 mailhog_hostname: mailhog
 mailhog_network: mailhog
 
-mailhog-image: mailhog/mailhog
+mailhog_image: mailhog/mailhog
