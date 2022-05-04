@@ -15,6 +15,7 @@ Ansible variables are listed below with their default values.
 mailhog_hostname
 mailhog_network
 mailhog_user
+mailhog_image
 ```
 
 ## Example playbook
